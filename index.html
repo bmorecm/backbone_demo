@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Backbone Demo</title>
+<script>    
+var templates = {
+    post: '<div class="post" style="color:{{color}}"><h1>{{title}}</h1><p>{{content}}</p></div>',
+    list_post: '<li><a href="{{id}}">{{title}}</a></li>'
+}
+</script>
+<style type="text/css">
+* {
+    padding:0;
+    margin:0;
+}
+body {
+    background-color:#e4e4e4;
+    padding:0;
+    margin:0;
+}
+h1 {
+    margin-bottom:20px;
+}
+.main {
+    background-color:#fff;
+    padding:40px;
+    box-shadow: 0 2px 3px #d3d3d3;
+    position:relative;
+    z-index:2;
+    transition:all .5s;
+    min-height:200px;
+}
+.main .post {
+    position:relative;
+}
+.main.out {
+    opacity:.3;
+    margin-top:-20px;
+}
+.main.out .post {
+    opacity:0;
+}
+.post-list {
+    position:relative;
+    z-index:1;
+}
+.post-list li {
+    padding:20px 40px;
+    border-bottom:1px solid #d3d3d3;
+    list-style:none;
+}
+.post-list li.active {
+    background-color:#fff;
+}
+a {
+    color:#000;
+}
+</style>
+</head>
+<body>
+    <div id="main" class="main"></div>
+    <ul id="post-list" class="post-list">
+
+    </ul>
+    <script type="text/html" id="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut mattis felis, id vehicula est. Duis aliquam, nunc a vestibulum interdum, nunc erat euismod lorem, vel dapibus nibh enim eget orci. Proin luctus tincidunt urna, ut porta nibh elementum sit amet. Sed convallis nulla sapien, at pulvinar odio efficitur eu. Maecenas ut tincidunt justo. Donec mattis non neque id interdum. Praesent vitae metus aliquam, condimentum elit eget, tempor eros. Aliquam pulvinar finibus orci eu dapibus. Duis sagittis, felis eget fringilla posuere, nulla urna tristique urna, nec auctor arcu eros id purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas malesuada mattis bibendum. Duis dignissim tortor vel risus lobortis elementum. Proin fermentum dolor euismod turpis pulvinar ultrices. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris vestibulum volutpat tincidunt.
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/handlebars.js"></script>
+    <script src="js/underscore.js"></script>
+    <script src="js/backbone.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
